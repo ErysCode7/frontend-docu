@@ -1,0 +1,72 @@
+.main-doc {
+    margin-left: 320px;
+    padding: 3rem 3rem 3rem 0;
+    font-size: 1.125rem;
+
+    @include max-width(laptop) {
+        margin-left: 240px;
+    }
+
+    @include max-width(tablet) {
+        width: 90%;
+        padding-right: 0;
+        margin: 0 auto;
+    }
+
+    >.main-section {
+
+        >header {
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+
+        >h1 {
+            font-size: 2.5rem;
+        }
+
+        a.main-links {
+            color: #0275d8;
+
+            &.dark-links {
+                color: #8cb4ff;
+            }
+        }
+
+        >article {
+            margin-left: 1.25rem;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+                border-radius: .25rem;
+            }
+
+            img.w500-h-200 {
+                width: 500px;
+                min-height: 200px;
+                object-fit: cover;
+                object-position: center;
+
+                @include max-width(mobile) {
+                    width: 100%;
+                }
+            }
+
+            >ul {
+                padding: 0.5rem 0 0.5rem 1.25rem;
+                border-radius: .25rem;
+
+                li {
+                    list-style-type: disc;
+                }
+            }
+
+            iframe {
+
+                @media(max-width: 600px) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

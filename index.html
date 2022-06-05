@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Developer Guide</title>
+    <!--GOOGLE FONTS-->
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!--FONTAWESOME-->
+    <script src="https://kit.fontawesome.com/0f45878e6a.js" crossorigin="anonymous" defer></script>
+    <!--css-->
+    <link rel="stylesheet" href="./dist/styles.css">
+    <!--GSAP-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" defer></script>
+    <!--JavaScript-->
+    <script src="./app/js/hamburger.js" defer></script>
+    <script src="./app/js/index.js" defer></script>
+    <link rel="shortcut icon" href="./assets/img/fundamentals.svg" type="image/x-icon">
+</head>
+
+<body>
+
+    <div class="mobile-nav">
+        <div class="hamburger not-active hide-for-tablets-mf" data-hamburger>
+            <span class="hamburger-span"></span>
+            <span class="hamburger-span" data-hamburger-span></span>
+            <span class="hamburger-span" data-hamburger-span></span>
+        </div>
+
+        <div class="darkmode-btn" data-darkmode>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="256"
+                height="256" viewBox="0 0 256 256" xml:space="preserve">
+                <desc>Created with Fabric.js 1.7.22</desc>
+                <defs>
+                </defs>
+                <g transform="translate(128 128) scale(0.72 0.72)" style="">
+                    <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
+                        transform="translate(-175.05 -175.05000000000004) scale(3.89 3.89)">
+                        <circle cx="45" cy="45" r="43"
+                            style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1;"
+                            transform="  matrix(1 0 0 1 0 0) " />
+                        <circle cx="45" cy="45" r="43"
+                            style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1;"
+                            transform="  matrix(1 0 0 1 0 0) " />
+                        <path
+                            d="M 45 90 C 20.187 90 0 69.813 0 45 C 0 20.187 20.187 0 45 0 c 24.813 0 45 20.187 45 45 C 90 69.813 69.813 90 45 90 z M 45 4 C 22.393 4 4 22.393 4 45 s 18.393 41 41 41 s 41 -18.393 41 -41 S 67.607 4 45 4 z"
+                            style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
+                            transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                        <path d="M 45 88 C 21.252 88 2 68.748 2 45 S 21.252 2 45 2 V 88 z"
+                            style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
+                            transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                    </g>
+                </g>
+            </svg>
+        </div>
+    </div>
+
+    <nav class="navbar" id="navbar" data-navbar>
+        <header class="header-nav">Frontend Development Guide</header>
+        <ul class="nav-item">
+            <li><a href="#introduction" class="nav-link">Introduction</a></li>
+            <li><a href="#prerequisite" class="nav-link">Getting started with the web</a></li>
+            <li><a href="#basic-software" class="nav-link">Installing Basic Software</a></li>
+            <li><a href="#html" class="nav-link">HTML - Structuring the web </a></li>
+            <li><a href="#css" class="nav-link">CSS - Sytling the web</a></li>
+            <li><a href="#javascript" class="nav-link">JavaScript - Dynamic client-side scripting</a></li>
+            <li><a href="#bootstrap" class="nav-link">Bootstrap - CSS Framework</a></li>
+            <li><a href="#sass" class="nav-link">SASS - CSS Preprocessor </a></li>
+            <li><a href="#git-github" class="nav-link">Git & Github - Version Control System</a></li>
+            <li><a href="#react" class="nav-link">React - JavaScript Library/Frameworks</a></li>
+            <li><a href="#references" class="nav-link">References</a></li>
+        </ul>
+    </nav>
+
+
+    <main class="main-doc" id="main-doc">
+        <section class="main-section" id="introduction">
+            <header>Introduction</header>
+            <h1>Getting started with web development</h1>
+
+            <article>
+                <a target="_blank" href="./assets/img/desktop.jpg"><img class="hero-img" src="./assets/img/desktop.jpg"
+                        alt="Web Development"></a>
+                <p>Web development refers in general to the tasks associated with developing websites for hosting via
+                    intranet or internet. The web development process includes web design, web content development,
+                    client-side/server-side scripting and network security configuration, among other tasks.
+                </p>
+
+                <p>Web development is the coding or programming that enables website functionality, per the owner's
+                    requirements. It mainly deals with the non-design aspect of building websites, which includes coding
+                    and writing markup.
+
+                </p>
+                <p>Web development can range from developing a simple single static page of plain text to complex
+                    web applications, electronic businesses, and social network services.</p>
+                <p>Web development is also known as website development, while the professionals that maintain a website
+                    are called web developers or (more commonly) web devs.</p>
+
+                <p>So, you’re interested in learning web development and becoming a web developer? First of all,
+                    congratulations. You’ve made a great choice.</p>
+                <img src="./assets/img/coding.jpg" alt="Coding">
+                <h3>Learning Web Development can be hard</h3>
+                <p>Start with the end in mind.
+                    One of the first things I recommend doing when starting out learning web development is to
+                    decide upon a clear end goal, and keep it in mind.</p>
+                <img src="./assets/img/frustate.jpg" alt="Frustate Man">
+                <p>Whatever your goal, it’s important to understand why you are doing this. This understanding will
+                    help you be more productive with your learning time. It will also help encourage you through
+                    those times when you feel like giving up.</p>
+                <p>Remember, no matter how elaborate and far away the end goal may seem now, you can achieve it with
+                    hard work and perseverance.</p>
+
+
+                <p>Assuming you have no previous experience, it’s a good idea in the beginning to also decide if
+                    your interest lies in back end or front end development. Let me briefly explain the difference.
+                </p>
+                <ul>
+                    <li>
+                        <p>Frontend — this is what the end user see’s and interacts with on the page. Its all the
+                            design,
+                            fancy effects, layout and imagery that creates the user experience.
+                            Generally front end developers will be visual creatives with excellent design skills and
+                            a
+                            passion for accessibility and user experience. Technologies often associated with front
+                            end web
+                            development are HTML, CSS and JavaScript.</p>
+                    </li>
+                    <li>
+                        <p>Backend — this is the part that typically processes, stores, and manipulates data. It’s
+                            how the
+                            website or application works. Back-end developers are generally good problem solvers,
+                            logical
+                            thinkers who are interested in the functionality of a website or application. Back-end
+                            development is usually associated with server side languages such as PHP, Python, and
+                            Ruby.</p>
+                        <p>Either way, wherever your interest lies, I still think that the best place to start is by
+                            learning some basic HTML and CSS. After all, it doesn’t matter what area of development
+                            that you
+                            ultimately want to work in, you still need to be able to display it on a webpage in some
+                            kind of
+                            mildly presentable form.</p>
+                    </li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="prerequisite">
+            <header>
+                <h2>Getting started with the web</h2>
+            </header>
+            <article>
+                <p>Getting started with the web is a concise series introducing you to the practicalities of web
+                    development. You'll set up the tools you need to construct a simple webpage and publish your own
+                    simple code.
+                </p>
+                <p>It's a lot of work to create a professional website, so if you're new to web development, we
+                    encourage you to start small. You won't build another Facebook right away, but it's not hard to make
+                    your own simple website online, so we'll start there.</p>
+            </article>
+        </section>
+        <section class="main-section" id="basic-software">
+            <header>
+                <h2>Installing Basic Software</h2>
+            </header>
+            <article>
+                <p>In Installing basic software, we show you what tools you need to do simple web development and how to
+                    install them properly.</p>
+                <h3>What tools do I actually need, right now?</h3>
+                <p>In this article, we'll set you up with the bare minimum — a text editor and some modern web browsers.
+                </p>
+                <h3>Installing a text editor</h3>
+                <p>You probably already have a basic text editor on your computer. By default Windows includes <u><a
+                            class="main-links" href="https://en.wikipedia.org/wiki/Windows_Notepad"
+                            target="_blank">Notepad</a></u> and
+                    macOS comes with
+                    <u><a class="main-links" href="https://en.wikipedia.org/wiki/TextEdit"
+                            target="_blank">TextEdit.</a></u>
+                    Linux distros vary; Ubuntu comes with <u><a class="main-links"
+                            href="https://en.wikipedia.org/wiki/Gedit" target="_blank">gedit</a></u>
+                    by
+                    default.
+                </p>
+                <p>We recommend starting with <u><a class="main-links" href="https://code.visualstudio.com/"
+                            target="_blank">Visual
+                            Studio Code</a></u>,
+                    which is
+                    a free editor, that offers live previews and
+                    code hints.</p>
+                <h3>Installing modern web browsers</h3>
+                <ul>
+                    <li><a class="main-links" href="https://www.mozilla.org/en-US/firefox/new/"
+                            target="_blank">Firefox</a></li>
+                    <li><a class="main-links" href="https://www.google.com/chrome/" target="_blank">Chrome</a></li>
+                    <li><a class="main-links" href="https://www.opera.com/" target="_blank">Opera</a></li>
+                    <li><a class="main-links" href="https://www.apple.com/safari/" target="_blank">Safari</a></li>
+                    <li><a class="main-links" href="https://www.microsoft.com/en-us/edge" target="_blank">Microsoft
+                            Edge</a></li>
+                </ul>
+                <p>We recommend to use <a class="main-links" href="https://www.google.com/chrome/"
+                        target="_blank">Chrome</a>, because
+                    it is very flexible
+                    in all platform.</p>
+                <h3>What tools do the professionals use?</h3>
+                <ul>
+                    <li class="mt-20px">A computer. Maybe that sounds obvious to some people, but some of you are
+                        reading
+                        this article
+                        on your phone or a library computer. For serious web development, it's better to invest in a
+                        desktop or laptop computer running Windows, macOS or Linux.</li>
+                    <li class="mt-20px">A text editor, to write code in. <u><a class="main-links"
+                                href="https://code.visualstudio.com/" target="_blank">Visual
+                                Studio
+                                Code</a></u> and there are many text editor out there!</li>
+                    <li class="mt-20px">Web browsers, to test code in. Currently, the most-used browsers are <a
+                            class="main-links" href="https://www.google.com/chrome/" target="_blank">Chrome</a>, <a
+                            href="https://www.opera.com/" target="_blank">Opera</a>, <a target="_blank"
+                            href="https://www.apple.com/safari/">Safari</a>,
+                        <a class="main-links" href="https://www.mozilla.org/en-US/firefox/new/"
+                            target="_blank">Firefox</a>, <a class="main-links"
+                            href="https://www.microsoft.com/en-us/edge" target="_blank">Microsoft Edge</a>
+                    </li>
+                    <li class="mt-20px">More tools besides!</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="html">
+            <header>
+                <h2>HTML</h2>
+            </header>
+            <article>
+                <h3>Introduction to Hypertext Markup Language (HTML)</h3>
+                <img class="html-img w500-h-200" src="./assets/img/languanges/course-html.jpg" alt="HTML">
+                <p><u><a class="main-links" href="https://en.wikipedia.org/wiki/HTML" target="_blank">HTML (HyperText
+                            Markup
+                            Language)</a></u> is the most
+                    basic building block of the Web. It defines the meaning
+                    and structure of web content. Other technologies besides HTML are generally used to describe a web
+                    page's appearance/presentation <u><a class="main-links" href="https://en.wikipedia.org/wiki/CSS"
+                            target="_blank">(CSS)</a></u> or
+                    functionality/behavior <u><a class="main-links" href="https://en.wikipedia.org/wiki/JavaScript"
+                            target="_blank">(JavaScript)</a></u>.
+                </p>
+                <p><u><a class="main-links" href="https://en.wikipedia.org/wiki/HTML" target="_blank">HTML</a></u>
+                    defines the basic
+                    framework of a website
+                    – the foundation upon which everything else is built
+                    upon. It forms the blocks that define a page’s layout, format, and critical components. Although it
+                    is theoretically possible to code a website on HTML only, it will be just a barebone site with no
+                    functions unless it’s enriched with <u><a class="main-links"
+                            href="https://en.wikipedia.org/wiki/CSS" target="_blank">CSS</a></u> and
+                    <u><a class="main-links" href="https://en.wikipedia.org/wiki/JavaScript"
+                            target="_blank">JavaScript</a></u>. Also,
+                    even simple style
+                    modifications such
+                    as changing the color of a button require a lot of coding to be executed using HTML only.
+                </p>
+                <p>"Hypertext" refers to links that connect web pages to one another, either within a single website or
+                    between websites. Links are a fundamental aspect of the Web. By uploading content to the Internet
+                    and linking it to pages created by other people, you become an active participant in the World Wide
+                    Web.</p>
+                <p>HTML uses "markup" to annotate text, images, and other content for display in a Web browser. HTML
+                    markup includes special "elements".</p>
+
+                <ul>
+                    <li>HTML stands for Hyper Text Markup Language</li>
+                    <li>HTML is the standard markup language for creating Web pages</li>
+                    <li>HTML describes the structure of a Web page</li>
+                    <li>HTML elements tell the browser how to display the content</li>
+                </ul>
+                <img src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics/grumpy-cat-small.png"
+                    alt="Getting_started_with_the_web">
+                <h4 class="mt-20px">The main parts of our element are as follows:</h4>
+                <ul>
+                    <li class="mt-20px">The opening tag: This consists of the name of the element (in this case, p),
+                        wrapped in opening
+                        and closing angle brackets. This states where the element begins or starts to take effect — in
+                        this case where the paragraph begins.</li>
+                    <li class="mt-20px">The closing tag: This is the same as the opening tag, except that it includes a
+                        forward slash
+                        before the element name. This states where the element ends — in this case where the paragraph
+                        ends. Failing to add a closing tag is one of the standard beginner errors and can lead to
+                        strange results.</li>
+                    <li class="mt-20px">The content: This is the content of the element, which in this case, is just
+                        text.</li>
+                    <li class="mt-20px">The element: The opening tag, the closing tag, and the content together comprise
+                        the element.
+                    </li>
+                </ul>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/qz0aGYrrlhU"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </article>
+        </section>
+        <section class="main-section" id="css">
+            <header>
+                <h2>CSS</h2>
+            </header>
+            <article>
+                <h3>CSS (Cascading Style Sheets)</h3>
+                <img class="css-img w500-h-200" src="./assets/img/languanges/course-css.jpg" alt="CSS">
+                <p><u><a class="main-links" href="https://en.wikipedia.org/wiki/CSS" target="_blank">CSS</a></u>
+                    (Cascading Style
+                    Sheets) allows you to create great-looking web pages Cascading Style Sheets is a style sheet
+                    language
+                    used for describing the presentation of a document written in a markup language such as <u><a
+                            class="main-links" href="https://en.wikipedia.org/wiki/HTML" target="_blank">HTML</a></u>.
+                    CSS is
+                    a cornerstone technology of the World Wide Web, alongside <u><a class="main-links"
+                            href="https://en.wikipedia.org/wiki/HTML" target="_blank">HTML</a></u> and <u><a
+                            class="main-links" href="https://en.wikipedia.org/wiki/JavaScript"
+                            target="_blank">JavaScript</a></u>.</p>
+                <p><u><a class="main-links" href="https://en.wikipedia.org/wiki/CSS" target="_blank">CSS</a></u>
+                    (Cascading Style
+                    Sheets) are two of the core technologies for building Web pages. HTML provides
+                    the structure of the page, CSS the (visual and aural) layout, for a variety of devices.</p>
+                <p>In short meaning <u><a class="main-links" href="https://en.wikipedia.org/wiki/CSS"
+                            target="_blank">CSS</a></u> is use
+                    for styling and designing the website such as how the layouts should look like, fonts, colors,
+                    background etc.
+                </p>
+                <p>CSS is the language we use to style a Web page.</p>
+                <ul>
+                    <li>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</li>
+                    <li>CSS saves a lot of work. It can control the layout of multiple web pages all at once</li>
+                    <li>External stylesheets are stored in CSS files</li>
+                </ul>
+                <h3>Why Use CSS?</h3>
+                <p>CSS is used to define styles for your web pages, including the design, layout and variations in
+                    display for different devices and screen sizes.</p>
+                <h4>CSS SYNTAX</h4>
+                <img class="mt-20px" src="https://www.w3schools.com/css/img_selector.gif" alt="css selector">
+                <p>The selector points to the HTML element you want to style.</p>
+                <p>The declaration block contains one or more declarations separated by semicolons.</p>
+                <p>Each declaration includes a CSS property name and a value, separated by a colon.</p>
+                <p>Multiple CSS declarations are separated with semicolons, and declaration blocks are surrounded by
+                    curly braces.</p>
+                <p>In this case our H1 element should be color blue and font-size of 12px.</p>
+                <h3>There are 3 ways to link your stylesheets to your HTML files</h3>
+                <ul>
+                    <li>Inline</li>
+                    <li>Internal</li>
+                    <li>External</li>
+                </ul>
+                <p>Out of the 3 given. We recommend to use the External CSS. To manage your code properly.</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/YNSnugnQYiI"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </article>
+        </section>
+        <section class="main-section" id="javascript">
+            <header>
+                <h2>JavaScript</h2>
+            </header>
+            <article>
+
+                <h3>JavaScript — Dynamic client-side scripting</h3>
+                <img class="js-img w500-h-200" src="./assets/img/languanges/course-javascript.jpg" alt="JavaScript">
+                <p><u><a class="main-links" href="https://en.wikipedia.org/wiki/JavaScript"
+                            target="_blank">JavaScript</a></u> is a
+                    scripting or programming language that allows you to implement complex features on web pages — every
+                    time a web page does more than just sit there and display static information for you to look at —
+                    displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video
+                    jukeboxes, etc. — you can bet that JavaScript is probably involved. It is the third layer of the
+                    layer cake of standard web technologies, two of which (<u><a class="main-links"
+                            href="https://en.wikipedia.org/wiki/HTML" target="_blank">HTML</a></u> and <u><a
+                            class="main-links" href="https://en.wikipedia.org/wiki/CSS" target="_blank">CSS</a></u>) we
+                    have covered in much more
+                    detail in other parts of the Learning Area.</p>
+                <p><u><a class="main-links" href="https://en.wikipedia.org/wiki/JavaScript"
+                            target="_blank">JavaScript</a></u> is a
+                    cross-platform, object-oriented scripting language. It is a small and lightweight language. Inside a
+                    host environment (for example, a web browser), JavaScript can be connected to the objects of its
+                    environment to provide programmatic control over them.</p>
+                <p><u><a class="main-links" href="https://en.wikipedia.org/wiki/JavaScript"
+                            target="_blank">JavaScript</a></u> contains
+                    a standard library of objects, such as Array, Date, and Math, and a core set of
+                    language elements such as operators, control structures, and statements. Core JavaScript can be
+                    extended for a variety of purposes by supplementing it with additional objects; for example:</p>
+                <ul>
+                    <li>Client-side JavaScript extends the core language by supplying objects to control a browser and
+                        its Document Object Model (DOM). For example, client-side extensions allow an application to
+                        place elements on an HTML form and respond to user events such as mouse clicks, form input, and
+                        page navigation.</li>
+                    <li>Server-side JavaScript extends the core language by supplying objects relevant to running
+                        JavaScript on a server. For example, server-side extensions allow an application to communicate
+                        with a database, provide continuity of information from one invocation to another of the
+                        application, or perform file manipulations on a server.</li>
+                </ul>
+                <ul>
+                    <li>JavaScript is the world's most popular programming language.</li>
+                    <li>JavaScript is the programming language of the Web.</li>
+                </ul>
+                <h3>Why Study JavaScript?</h3>
+                <p><u><a class="main-links" href="https://en.wikipedia.org/wiki/JavaScript"
+                            target="_blank">JavaScript</a></u> is one of
+                    the <strong>3 languages</strong> all web developers must learn:</p>
+                <ul>
+                    <li><u><a class="main-links" href="https://en.wikipedia.org/wiki/HTML" target="_blank">HTML</a></u>
+                        to define the
+                        content of web pages</li>
+                    <li><u><a class="main-links" href="https://en.wikipedia.org/wiki/CSS" target="_blank">CSS</a></u> to
+                        specify the
+                        layout of web pages</li>
+                    <li><u><a class="main-links" href="https://en.wikipedia.org/wiki/JavaScript"
+                                target="_blank">JavaScript</a></u> to
+                        program the behavior of web pages</li>
+                </ul>
+                <ul class="mt-20px">
+                    <li class="mt-20px"><u><a class="main-links" href="https://en.wikipedia.org/wiki/HTML"
+                                target="_blank">HTML</a></u>
+                        is the markup
+                        language that we use to structure and give meaning to our web content, for example defining
+                        paragraphs, headings, and data tables, or embedding images and videos in the page.</li>
+                    <li class="mt-20px"><u><a class="main-links" href="https://en.wikipedia.org/wiki/CSS"
+                                target="_blank">CSS</a></u> is
+                        a language of
+                        style rules that we use to apply styling to our HTML content, for example setting background
+                        colors and fonts, and laying out our content in multiple columns.</li>
+                    <li class="mt-20px"><u><a class="main-links" href="https://en.wikipedia.org/wiki/JavaScript"
+                                target="_blank">JavaScript</a></u> is a
+                        scripting language that enables you to create dynamically updating content, control multimedia,
+                        animate images, and pretty much everything else. (Okay, not everything, but it is amazing what
+                        you can achieve with a few lines of JavaScript code.)</li>
+
+                </ul>
+                <p>There are many resources in the Internet to start learning JavaScript.</p>
+                <p>JavaScript is very complex topic we recommend you to practice, practice, practice, code, code code.
+                </p>
+                <iframe class="mt-20px" width="560" height="315" src="https://www.youtube.com/embed/8dWL3wF_OMw"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+
+            </article>
+        </section>
+        <section class="main-section" id="bootstrap">
+            <header>
+                <h2>Bootstrap</h2>
+            </header>
+            <article>
+                <h3>Bootstrap CSS Frameworks</h3>
+                <img class="boot-img w500-h-200" src="./assets/img/languanges/course-bootstrap.jpg" alt="Bootstrap">
+                <p>Build fast, responsive sites with Bootstrap</p>
+                <h3>What is Bootstrap</h3>
+                <p>It is a front-end framework used for easier and faster web development. It includes HTML and CSS
+                    based design templates for typography, forms, buttons, tables, navigation, modals, image carousels
+                    and many others. It can also use JavaScript plug-ins. It facilitates you to create responsive
+                    designs.</p>
+                <p><u><a target="_blank" href="https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)"
+                            target="_blank">Bootstrap</a></u> is a
+                    free and open-source CSS framework directed at responsive, mobile-first front-end web
+                    development. It contains HTML, CSS and JavaScript-based design templates for typography, forms,
+                    buttons, navigation, and other interface components.</p>
+                <ul>
+                    <li>Bootstrap is the most popular HTML, CSS, and JavaScript framework for developing responsive,
+                        mobile-first websites.</li>
+                    <li>Bootstrap is completely free to download and use!</li>
+                </ul>
+                <p>There are 2 ways to include Bootstrap in your project</p>
+                <ul>
+                    <li>Install via package manager</li>
+                    <li>Include via CDN</li>
+                </ul>
+                <p>Checkout this documentation to learn more about <u><a href="https://getbootstrap.com/"
+                            target="_blank">Bootstrap</a></u>
+                </p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/-qfEOE4vtxE"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </article>
+        </section>
+        <section class="main-section" id="sass">
+            <header>
+                <h2>SASS</h2>
+            </header>
+            <article>
+                <h3>SASS (Syntactically Awesome Stylesheet)</h3>
+                <img class="sass-img w500-h-200" src="./assets/img/languanges/course-sass.jpg" alt="SASS">
+                <h3>What is a Sass?</h3>
+                <p><u><a target="_blank" href="https://en.wikipedia.org/wiki/Sass_(stylesheet_language)"
+                            target="_blank">SASS</a></u>
+                    stands for
+                    Syntactically Awesome Stylesheet. Sass is an extension to CSS. Sass is a CSS pre-processor. Sass is
+                    completely compatible with all versions of CSS. Sass reduces repetition of CSS and therefore saves
+                    time.</p>
+                <p><u><a target="_blank" href="https://en.wikipedia.org/wiki/Sass_(stylesheet_language)">SASS</a></u> is
+                    a preprocessor
+                    scripting language that is interpreted or compiled into Cascading Style
+                    Sheets. SassScript is the scripting language itself.</p>
+                <ul>
+                    <li>Sass is a CSS pre-processor.</li>
+                    <li>Sass reduces repetition of CSS and therefore saves time.</li>
+                    <li>Sass stands for Syntactically Awesome Stylesheet</li>
+                    <li>Sass is an extension to CSS</li>
+                    <li>Sass is completely compatible with all versions of CSS</li>
+                    <li>Sass was designed by Hampton Catlin and developed by Natalie Weizenbaum in 2006</li>
+                    <li>Sass is free to download and use</li>
+                </ul>
+                <h3>Why Use Sass?</h3>
+                <p>Stylesheets are getting larger, more complex, and harder to maintain. This is where a CSS
+                    pre-processor can help.</p>
+                <p><u><a target="_blank" href="https://en.wikipedia.org/wiki/Sass_(stylesheet_language)">SASS</a></u>
+                    lets you use
+                    features that do not exist in CSS, like variables, nested rules, mixins, imports,
+                    inheritance, built-in functions, and other stuff. </p>
+                <p>SASS VS CSS</p>
+                <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--7vxCRBOI--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/hwr7c2c2najfq9p5ie5k.jpg"
+                    alt="SASS VS CSS">
+                <p>As you can see we can nest element in SASS making our CSS more powerful and dynamic</p>
+                <p>SCSS contains all the features of CSS and contains more features that are not present in CSS which
+                    makes it a good choice for developers to use it. SCSS is full of advanced features. SCSS offers
+                    variables, you can shorten your code by using variables. It is a great advantage over conventional
+                    CSS.</p>
+                <p>To learn more about <u><a href="https://en.wikipedia.org/wiki/Sass_(stylesheet_language)"
+                            target="_blank">SASS</a></u> you can look at
+                    the <u><a target="_blank" href="https://sass-lang.com/">documentation.</a></u> </p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Zz6eOVaaelI"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </article>
+        </section>
+        <section class="main-section" id="git-github">
+            <header>
+                <h2>Git & Github</h2>
+            </header>
+            <article>
+                <h3>Git (Version Control) & Github (Code hosting platform)</h3>
+                <img class="w500-h-200" src="./assets/img/github-logo.png" alt="Github">
+                <h3>What is GitHub? What is Git? And How to Use These Developer Tools.</h3>
+                <p>The first programs you write will probably not be very impressive. You'll make lots of mistakes and
+                    you'll never want to revisit the past.</p>
+                <p>But soon enough, you'll be writing large, complex programs. Maybe you'll delete some stuff now that
+                    you want to bring back later. Or maybe you'll bring in a friend to help, and want to gracefully add
+                    their changes to your program while you continue to work on your parts.</p>
+                <p>That's where version control comes in, and it's a skill that any employer will expect you to have
+                    mastered. It's also extremely useful for anyone working on anything that is saved in pieces - from a
+                    computer program to a recipe to a novel.</p>
+                <p>The first thing you'll want to do are install git. Click hero to install <u><a
+                            href="https://git-scm.com/downloads" target="_blank">Git</a></u></p>
+                <p>Once you've done that, create a <u><a target="_blank" href="https://github.com/"
+                            target="_blank">Github</a></u>
+                    account.</p>
+                <h3 class="mt-20px">What is version control?</h3>
+                <p>Version control refers to the ability to save your place in a document or folder and reference
+                    previous saves.</p>
+                <h3 class="mt-20px">What is Git?</h3>
+                <p><u><a target="_blank" href="https://en.wikipedia.org/wiki/Git">Git</a></u> is a version control
+                    system developed by
+                    Linus Torvalds in 2005 (the same guy who wrote Linux).
+                    Git helps developers keep track of the state of their code and allows collaboration on a codebase.
+                    We'll go over the main components a little later.</p>
+                <p><u><a target="_blank" href="https://en.wikipedia.org/wiki/Git">Git</a></u> is a version-control
+                    system for tracking
+                    changes in computer files and coordinating work on those
+                    files among multiple people. Git is a Distributed Version Control System. So Git does not
+                    necessarily rely on a central server to store all the versions of a project’s files. Instead, every
+                    user “clones” a copy of a repository (a collection of files) and has the full history of the project
+                    on their own hard drive. This clone has all of the metadata of the original while the original
+                    itself is stored on a self-hosted server or a third party hosting service like <u><a
+                            href="https://en.wikipedia.org/wiki/GitHub">Github</a></u>.</p>
+                <img class="w500-h-200 mt-20px" src="https://git-scm.com/images/logos/downloads/Git-Logo-2Color.png"
+                    alt="Git">
+                <p class="mt-20px">Instead of needing to keep track of every single line of code in your program, it
+                    instead notes the
+                    changes between the code you have now and the last time you saved. It keeps a running note of when
+                    each line of code was saved last, and stores them in a special hidden folder.</p>
+                <h3>What is Github?</h3>
+                <img src="https://www.howtogeek.com/wp-content/uploads/2017/09/1-github-explained.png?height=200p&trim=2,2,2,2"
+                    alt="">
+                <p><u><a target="_blank" href="https://en.wikipedia.org/wiki/GitHub">Github</a></u> is a code hosting
+                    platform for
+                    version control and collaboration. It lets you and others work
+                    together on projects from anywhere. This tutorial teaches you GitHub essentials like repositories,
+                    branches, commits, and pull requests.</p>
+                <p>GitHub is an online software development platform used for storing, tracking, and collaborating on
+                    software projects. It enables developers to upload their own code files and to collaborate with
+                    fellow developers on open-source projects.</p>
+                <p>Below is a sample of Github repository.</p>
+                <img src="./assets/img/respository.jpg" alt="Github repository">
+                <p>We recommend to watch Git & Github tutorial to understand better.</p>
+                <iframe class="mt-20px" width="560" height="315" src="https://www.youtube.com/embed/RGOj5yH7evk"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </article>
+        </section>
+        <section class="main-section" id="react">
+            <header>
+                <h2>React</h2>
+            </header>
+            <article>
+                <h3>React JavaScript Library</h3>
+                <img class="w500-h-200" src="./assets/img/languanges/course-react.jpg" alt="React">
+                <h3>What is React used for?</h3>
+                <p>
+                    <u><a target="_blank" href="https://en.wikipedia.org/wiki/React_(JavaScript_library)">React</a></u>
+                    is an
+                    open-source JavaScript library that is used for building user interfaces
+                    specifically for single-page applications. It's used for handling the view layer for web and mobile
+                    apps. React also allows us to create reusable UI components.
+                </p>
+                <ul>
+                    <li>React is a JavaScript library for building user interfaces.</li>
+                    <li>React is used to build single-page applications.</li>
+                    <li>React allows us to create reusable UI components.</li>
+                </ul>
+                <p>React is a JavaScript-based UI development library. Facebook and an open-source developer community
+                    run it. Although React is a library rather than a language, it is widely used in web development.
+                    The library first appeared in May 2013 and is now one of the most commonly used frontend libraries
+                    for web development.</p>
+                <p>React offers various extensions for entire application architectural support, such as Flux and React
+                    Native, beyond mere UI.</p>
+                <h3 class="mt-20px">Why React?</h3>
+                <p>React’s popularity today has eclipsed that of all other front-end development frameworks. Here is
+                    why:</p>
+                <ul>
+                    <li>Easy creation of dynamic applications: React makes it easier to create dynamic web applications
+                        because it requires less coding and offers more functionality, as opposed to JavaScript, where
+                        coding often gets complex very quickly.</li>
+                    <li>Improved performance: React uses Virtual DOM, thereby creating web applications faster. Virtual
+                        DOM compares the components’ previous states and updates only the items in the Real DOM that
+                        were changed, instead of updating all of the components again, as conventional web applications
+                        do. </li>
+                    <li>Reusable components: Components are the building blocks of any React application, and a single
+                        app usually consists of multiple components. These components have their logic and controls, and
+                        they can be reused throughout the application, which in turn dramatically reduces the
+                        application’s development time.</li>
+                    <li>Unidirectional data flow: React follows a unidirectional data flow. This means that when
+                        designing a React app, developers often nest child components within parent components. Since
+                        the data flows in a single direction, it becomes easier to debug errors and know where a problem
+                        occurs in an application at the moment in question.</li>
+                    <li>Small learning curve: React is easy to learn, as it mostly combines basic HTML and JavaScript
+                        concepts with some beneficial additions. Still, as is the case with other tools and frameworks,
+                        you have to spend some time to get a proper understanding of React’s library.</li>
+                    <li>It can be used for the development of both web and mobile apps: We already know that React is
+                        used for the development of web applications, but that’s not all it can do. There is a framework
+                        called React Native, derived from React itself, that is hugely popular and is used for creating
+                        beautiful mobile applications. So, in reality, React can be used for making both web and mobile
+                        applications.</li>
+                    <li>Dedicated tools for easy debugging: Facebook has released a Chrome extension that can be used to
+                        debug React applications. This makes the process of debugging React web applications faster and
+                        easier.</li>
+                </ul>
+                <p>To learn more about React checkout the <a target="_blank" href="https://reactjs.org/">React
+                        documentation</a>.</p>
+            </article>
+        </section>
+    </main>
+
+
+</body>
+
+</html>
