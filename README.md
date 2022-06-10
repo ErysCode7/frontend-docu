@@ -21,8 +21,8 @@ This is one of my https://www.freecodecamp.org/learn/responsive-web-design/respo
 
 ### Links
 
-- Solution URL: [https://github.com/ErysCode7/easybank-landing-page](https://github.com/ErysCode7/easybank-landing-page)
-- Live Site URL: [https://eryscode7.github.io/easybank-landing-page//](https://eryscode7.github.io/easybank-landing-page/)
+- Solution URL: [https://github.com/ErysCode7/frontend-documentation](https://github.com/ErysCode7/frontend-documentation)
+- Live Site URL: [https://eryscode7.github.io/frontend-documentation/](https://eryscode7.github.io/frontend-documentation/)
 
 ## My process
 
